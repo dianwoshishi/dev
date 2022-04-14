@@ -1,15 +1,31 @@
-# What is this?
+# generate blacklist configuration for nerd
 
-The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
+## usage
 
-There are two ways to go directly to a VS Code environment in your browser and start coding:
+python3 gen_primary_blacklist_configuration_file.py
 
-* Press the . key on any repository or pull request.
-* Swap `.com` with `.dev` in the URL. For example, this repo https://github.com/github/dev becomes http://github.dev/github/dev
+```yml
 
-Preview the gif below to get a quick demo of github.dev in action.
-
-![github dev](https://user-images.githubusercontent.com/856858/130119109-4769f2d7-9027-4bc4-a38c-10f297499e8f.gif)
-
-# Why?
-It’s a quick way to edit and navigate code. It's especially useful if you want to edit multiple files at a time or take advantage of all the powerful code editing features of Visual Studio Code when making a quick change. For more information, see our [documentation](https://github.co/codespaces-editor-help).
+# [attacks]iblocklist_spamhaus_drop by iBlocklist.com.:Spamhaus.org DROP (Don't Route Or Peer)  list. . source url is http://list.iblocklist.com/?list=zbdlwrqkabxbcppvrnos&fileformat=p2p&archiveformat=gz 
+# 2022-04-12 23:02:02 	 last_time_updated_by_its_maintainers
+# 2022-04-12 23:20:31 	 last_time_processed_by_us 
+# 2022-04-12 23:02:02 	 last_time_we_checked
+# check_frequency 	12.0
+# average_update_frequency 	63.95
+# ips 	18068480
+# ips_min 	8848384
+# ips_max 	21181952
+# ipv 	ipv4
+# hash 	net
+# errors 	0
+- id: iblocklist_spamhaus_drop
+  name: '[attacks]iblocklist_spamhaus_drop by iBlocklist.com.'
+  descr: 'Spamhaus.org DROP (Dont Route Or Peer)  list. . source url is http://list.iblocklist.com/?list=zbdlwrqkabxbcppvrnos&fileformat=p2p&archiveformat=gz '
+  firehol_link: http://iplists.firehol.org/?ipset=iblocklist_spamhaus_drop
+  provider_link: https://www.iblocklist.com/
+  url: https://iplists.firehol.org/files/iblocklist_spamhaus_drop.netset
+  regex: "^(\\P)"
+  time:
+    hour: "5"
+    minute: 3
+```
